@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # These are the top commands in linux 
+echo "*********************************************************"
+
 echo "The current disk utilization on the server $HOSTNAME is: "
 df -h; 
 
