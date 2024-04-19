@@ -15,3 +15,5 @@ echo "*********************************************************"
 
 echo "The current user on server $HOSTNAME is: "
 whoami; 
+
+$IPaddress
