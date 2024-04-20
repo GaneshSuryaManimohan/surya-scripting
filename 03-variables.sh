@@ -6,7 +6,7 @@ read USERNAME
 useradd $USERNAME
 
 echo "Please enter the password:: "
-read PASSWORD
-passwd $PASSWORD
+read -s PASSWORD
+passwd $USERNAME $PASSWORD
 
 echo "user $USERNAME is added"
