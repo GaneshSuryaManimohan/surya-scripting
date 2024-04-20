@@ -1,11 +1,5 @@
 #!/bin/bash
 
-NUM=45
-NUM2=45
-
-SUM=$(($NUM+$NUM2))
-echo "Total is $SUM"
-
 echo "Displaying all variables:  $@"
 echo "Displaying no.of variables passed: $#"
 echo "Displaying Script Name: $0"
