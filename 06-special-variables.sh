@@ -21,3 +21,4 @@ echo "Displaying process ID of background command: $!"
 #Displaying the user: root
 #Displaying hostname: ip-172-31-25-233.ec2.internal
 #Process ID of the running script: 3601
+#Displaying process ID of background command: 3753
