@@ -2,7 +2,7 @@
 
 NUMBER=$1
 
-read $NUMBER
+read $1
 
 if [ $NUMBER -gt 10 ]; 
 then
