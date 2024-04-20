@@ -4,7 +4,7 @@ SQUAD=("Sehwag" "Sachin" "Gambhir" "Kohli" "Raina" "Dhoni" "Yuvraj" "Jadeja" "Bu
 
 # This size of above array is 11, but the index points are 10. Index starts with 0, hence 10.
 
-echo "Openers are:  ${SQUAD[0 1]}"
+echo "Openers are:  ${SQUAD[0:1]}"
 echo "Batsman In at 3: ${SQUAD[2]}"
 echo "Batsman In at 4: ${SQUAD[3]}"
 echo "Batsman In at 5: ${SQUAD[4]}"
