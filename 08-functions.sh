@@ -27,17 +27,17 @@ fi
 
 echo "****************************************************************************************************"
 
-echo "MySQL Installation" &>>$LOGFILE
+echo "MySQL Installation" 
 
-dnf install mysql -y
+dnf install mysql -y &>>$LOGFILE
 VALIDATE $? "Installion of MYSQL: "
 
 
 echo "****************************************************************************************************"
 
-echo "Nginx Installation" &>>$LOGFILE
+echo "Nginx Installation" 
 
-dnf install nginx -y
+dnf install nginx -y &>>$LOGFILE
 VALIDATE $? "Installion of NGINX: "
 
 
