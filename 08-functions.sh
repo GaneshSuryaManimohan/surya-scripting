@@ -37,7 +37,7 @@ echo "**************************************************************************
 
 echo "Nginx Installation" 
 
-dnf install nginx -y &>>$LOGFILE
+dnf install nginxy -y &>>$LOGFILE
 VALIDATE $? "Installion of NGINX: "
 
 
