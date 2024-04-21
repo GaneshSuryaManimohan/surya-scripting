@@ -4,8 +4,6 @@ echo "Please enter the username:: "
 
 read USERNAME
 useradd $USERNAME
-
-echo "Please enter the password:: "
-read -s password
+passwd $USERNAME
 
 echo "username is $USERNAME password is "
