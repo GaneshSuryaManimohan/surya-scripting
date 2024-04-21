@@ -3,7 +3,7 @@
 USERID=$(id -u)
 VALIDATE(){
     echo "Exit Status: $1"
-    echo "Exit Status: $2"
+    echo "Current Operation: $2"
 
 }
 
