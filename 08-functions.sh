@@ -27,7 +27,7 @@ fi
 
 echo "****************************************************************************************************"
 
-echo "MySQL Installation"
+echo "MySQL Installation" &>>$LOGFILE
 
 dnf install mysql -y
 VALIDATE $? "Installion of MYSQL: "
@@ -35,7 +35,7 @@ VALIDATE $? "Installion of MYSQL: "
 
 echo "****************************************************************************************************"
 
-echo "Nginx Installation"
+echo "Nginx Installation" &>>$LOGFILE
 
 dnf install nginx -y
 VALIDATE $? "Installion of NGINX: "
