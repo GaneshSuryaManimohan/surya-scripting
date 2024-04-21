@@ -8,7 +8,7 @@ echo "Displaying home directory of current user: $HOME"
 echo "Displaying the user: $USER"
 echo "Displaying hostname: $HOSTNAME"
 echo "Process ID of the running script: $$"
-sleep 60 &
+sleep 60
 echo "Displaying process ID of background command: $!"
 
 ### OUTPUT ###
