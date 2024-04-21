@@ -2,8 +2,13 @@
 
 USERID=$(id -u)
 VALIDATE(){
-    echo "Exit Status: $1"
-    echo "Current Operation: $2"
+    if [ $1 -ne 0 ]
+    then
+        echo "$2....Operation FAILED"
+        exit 1
+    else
+        echo "$2....Operation SUCCESS
+    fi    
 
 }
 
@@ -25,10 +30,10 @@ VALIDATE $? "Installion of MYSQL: "
 
 echo "****************************************************************************************************"
 
-echo "GIT Installation"
+echo "Nginx Installation"
 
-dnf install git -y
-VALIDATE $? "Installion of GIT: "
+dnf install nginx -y
+VALIDATE $? "Installion of NGINX: "
 
 
 echo "****************************************************************************************************"
