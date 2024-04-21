@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 TIMESTAMP=$(date +%F:%H:%M:%S)
-SCRIPT_FILE=$($0 |cut -d "." -f1 )
+SCRIPT_FILE=$( echo $0 |cut -d "." -f1 )
 LOGFILE=$/tmp/$SCRIPT_FILE-$TIMESTAMP.log
 
 
