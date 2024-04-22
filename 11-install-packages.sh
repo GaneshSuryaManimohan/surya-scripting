@@ -9,4 +9,8 @@ else
     echo "Running this script as a root user"
 fi
 
-echo "All Packages:: $@ "
+for i in $@
+do
+    echo "Installing: $i "
+done
+
