@@ -45,3 +45,6 @@ VALIDATE $? "Installion of NGINX: "
 
 
 echo "****************************************************************************************************"
+
+dnf install dockerr -y &>>$LOGFILE
+VALIDATE $? "Installion of Docker: "
