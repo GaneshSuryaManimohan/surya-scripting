@@ -26,7 +26,7 @@ do
     then
         echo -e "$i is already installed...$Y SKIPPING $N "
     else
-        echo "Need to Install:: $i "
+        dnf install $i -y &>>$LOGFILE
     fi
 done
 
