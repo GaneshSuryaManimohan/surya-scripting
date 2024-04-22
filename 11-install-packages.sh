@@ -9,6 +9,15 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+VALIDATE(){
+    if [ $1 -ne 0]
+    then
+        echo -e "$2 installation.... $R FAILURE $N"
+        exit 1
+    else
+        echo -e "$2 installation....$G SUCCESS $N"
+    fi
+}
 
 if [ $USERID -ne 0 ]
 then
@@ -27,6 +36,7 @@ do
         echo -e "$i is already installed...$Y SKIPPING $N "
     else
         dnf install $i -y &>>$LOGFILE
+        VALIDATE $? "Installation of $i"
     fi
 done
 
