@@ -18,5 +18,10 @@ for i in $@
 do
     echo "Installing Package: $i "
     dnf list installed $i &>>$LOGFILE
+    if [ $? -eq 0 ]
+    then
+        echo "$i is already installed...SKIPPING"
+    else
+        echo "Need to Install:: $i "
 done
 
