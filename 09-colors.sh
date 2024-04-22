@@ -4,16 +4,18 @@ USERID=$(id -u)
 TIMESTAMP=$(date +%F:%H:%M:%S)
 SCRIPT_FILE=$( echo $0 |cut -d "." -f1 )
 LOGFILE=/tmp/$SCRIPT_FILE-$TIMESTAMP.log
-
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 
 
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "$2....Operation FAILED"
+        echo -e "$2....$R Operation FAILED"
         exit 1
     else
-        echo "$2....Operation SUCCESS"
+        echo -e "$2.... $N Operation SUCCESS"
     fi    
 
 }

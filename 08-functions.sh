@@ -14,7 +14,6 @@ VALIDATE(){
     else
         echo "$2....Operation SUCCESS"
     fi    
-
 }
 
 if [ $USERID -ne 0 ]
