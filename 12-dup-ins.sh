@@ -3,7 +3,9 @@
 USERID=$(id -u)
 TIMESTAMP=$(date +%F:%H:%M:%S)
 SCRIPT_FILE=$( echo $0 | cut -d "." -f1 )
-LOGFILE=/tmp/$SCRIPT_FILE-$TIMESTAMP.log
+ALL_LOGS=/tmp/$SCRIPT_FILE-$TIMESTAMP.log
+ERROR_LOGS=/tmp/$SCRIPT_FILE-$TIMESTAMP-error.log
+SUCCESS_LOGS=/tmp/$SCRIPT_FILE-$TIMESTAMP-success.log
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -30,12 +32,18 @@ fi
 for i in $@
 do
     echo "Installing Package: $i "
-    dnf list installed $i &>>$LOGFILE
+    dnf list installed $i &>>$ALL_LOGS
     if [ $? -eq 0 ]
     then
         echo -e "$i is already installed...$Y SKIPPING $N "
     else
-        dnf install $i -y &>>$LOGFILE
+        dnf install $i -y 
+        if [ $? -eq 0 ]
+        then
+            >> $SUCCESS_LOGS
+        else
+            2>> $ERROR_LOGS
+        fi
         VALIDATE $? "$i"
     fi
 done
