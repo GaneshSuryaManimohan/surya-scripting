@@ -46,5 +46,5 @@ VALIDATE $? "Installion of NGINX: "
 
 echo "****************************************************************************************************"
 
-dnf install dockerr -y &>>$LOGFILE
+dnf install dockerr -y &>>$LOGFILE  #this will return "Operation Failed" as the  docker spelling is incorrect
 VALIDATE $? "Installion of Docker: "
