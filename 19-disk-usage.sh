@@ -21,11 +21,11 @@ done <<< $DISK_USAGE
 
 echo -e "Message is: $MESSAGE "
 
-# if [ $MESSAGE -gt 20 ]
-# then 
-#     echo -e "Message is: 
-#     $R $MESSAGE $N"
-# else
-#     echo -e "Message is: 
-#     $Y $MESSAGE $N"
-# fi
+if [ $USAGE -gt 20 ]
+then 
+  echo -e "Message is: 
+  $R $MESSAGE $N"
+else
+    echo -e "Message is: 
+    $Y $MESSAGE $N"
+fi
