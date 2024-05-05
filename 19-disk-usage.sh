@@ -1,5 +1,10 @@
 #!/bin/bash
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 DISK_USAGE=$(df -hT |grep xfs)
 DISK_THRESHOLD=5
 MESSAGE=""
@@ -14,5 +19,11 @@ do
     fi
 done <<< $DISK_USAGE
 
-echo -e "Message is: 
-$MESSAGE"
+if [ $MESSAGE -lt 20 ]
+then 
+    echo -e "Message is: 
+    $Y $MESSAGE $N"
+else
+    echo -e "Message is: 
+    $R $MESSAGE $N"
+fi
