@@ -9,8 +9,8 @@ N="\e[0m"
 
 if [ -d $SOURCE_DIRECTORY ]
 then
-    echo " $G Source Directory Exists $N "
+    echo -e " $G Source Directory Exists $N "
 else
-    echo "$R Please make sure source directory exists $N "
+    echo -e "$R Please make sure source directory exists $N "
     exit 1
 fi
