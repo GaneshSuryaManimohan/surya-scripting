@@ -15,8 +15,6 @@ do
     if [ $USAGE -gt $DISK_THRESHOLD ]
     then
         echo -e "$FOLDER usage is more than $DISK_THRESHOLD, $R current usage is: $USAGE $N \n"
-    else
-        echo -e "$FOLDER usage is less than $DISK_THRESHOLD, $G current usage is: $USAGE $N \n"
     fi
 done <<< $DISK_USAGE
 
