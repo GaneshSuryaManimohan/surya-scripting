@@ -7,6 +7,6 @@ echo "process ID of current shell script: $$"
 
 ./14-other-script.sh
 
-echo "Calling Other script $COURSE"
+echo "Calling $COURSE"
 
 
