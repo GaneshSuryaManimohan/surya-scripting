@@ -17,4 +17,5 @@ fi
 
 FILES=$( find $SOURCE_DIRECTORY -name "*.log" -mtime +14 )
 
-echo "Files to delete $FILES"
+echo "Files to delete \n 
+$FILES"
