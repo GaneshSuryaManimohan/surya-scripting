@@ -20,6 +20,11 @@ FILES=$( find $SOURCE_DIRECTORY -name "*.log" -mtime +14 )
 echo "Files to delete:
 $FILES"
 
+for files in $FILES
+do
+    zip zipped.zip
+done
+
 # while IFS= read -r line
 # do 
 #     echo -e "$R Deleting File $N: $line"
