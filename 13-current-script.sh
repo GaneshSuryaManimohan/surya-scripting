@@ -16,4 +16,5 @@ echo "After calling other script, course: $COURSE"
 # process ID of other shell script: 1657
 # After calling other script, course: DevOps from current script
 
-# in this way of calling ./<script_name>.sh the variable will not change but the process ID will change. Hence we use source command
+# in this way of calling ./<script_name>.sh the variable will not change but the process ID will change. Hence we use source command.
+# refer 15-call-from-source.sh
