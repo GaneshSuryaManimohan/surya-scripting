@@ -20,3 +20,5 @@ do
 done <<< $DISK_USAGE
 
 echo -e "Message is: $MESSAGE "
+
+echo "Hi Team, the current disk utilization on $HOSTNAME is $MESSAGE" | mail -s "Disk Utilization"
