@@ -19,6 +19,8 @@ do
     fi
 done <<< $DISK_USAGE
 
+echo -e "Message is: $MESSAGE "
+
 # if [ $MESSAGE -gt 20 ]
 # then 
 #     echo -e "Message is: 
