@@ -14,17 +14,8 @@ do
     FOLDER=$( echo $line |awk -F " " '{print $NF}')
     if [ $USAGE -gt $DISK_THRESHOLD ]
     then
-        echo -e "$R $FOLDER usage is more than $DISK_THRESHOLD, current usage is: $USAGE $N \n"
+        echo -e "$FOLDER usage is more than $DISK_THRESHOLD, $R current usage is: $USAGE $N \n"
     fi
 done <<< $DISK_USAGE
 
 echo -e "Message is: $MESSAGE "
-
-if [ $USAGE -gt 20 ]
-then 
-  echo -e "Message is: 
-  $R $MESSAGE $N"
-else
-    echo -e "Message is: 
-    $Y $MESSAGE $N"
-fi
