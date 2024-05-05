@@ -8,5 +8,3 @@ echo "process ID of current shell script: $$"
 ./14-other-script.sh
 
 echo "process ID of current shell script: $$"
-
-
