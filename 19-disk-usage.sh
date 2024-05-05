@@ -19,11 +19,11 @@ do
     fi
 done <<< $DISK_USAGE
 
-if [ $MESSAGE -lt 20 ]
+if [ $MESSAGE -gt 20 ]
 then 
     echo -e "Message is: 
-    $Y $MESSAGE $N"
+    $R $MESSAGE $N"
 else
     echo -e "Message is: 
-    $R $MESSAGE $N"
+    $Y $MESSAGE $N"
 fi
