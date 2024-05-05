@@ -22,7 +22,7 @@ $FILES"
 
 for files in $FILES
 do
-    gzip zipped.zip
+    gzip $FILES
 done
 
 # while IFS= read -r line
