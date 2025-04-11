@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grep -wc "$1" $2
+ grep -wc "$1"
